@@ -31,6 +31,12 @@
         <activity
             android:name=".submitNoiseActivity"
             android:label="@string/app_name" />
+        <activity
+            android:name=".submitPartyActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".RelevantActivity"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>

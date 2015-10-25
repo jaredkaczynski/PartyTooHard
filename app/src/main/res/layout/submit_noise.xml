@@ -9,6 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_gravity="center_horizontal"
-        android:text="Click to report a noise issue"
+        android:onClick="stopPartyActivity"
+        android:text="Tap to report a noise issue"
         android:textSize="50dp" />
 </LinearLayout>

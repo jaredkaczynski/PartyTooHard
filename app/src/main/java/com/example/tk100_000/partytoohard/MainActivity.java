@@ -19,7 +19,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startPartyActivity(View test) {
-        Intent intent = new Intent(MainActivity.this, submitNoiseActivity.class);
+        Intent intent = new Intent(MainActivity.this, submitPartyActivity.class);
+        startActivity(intent);
+    }
+
+    public void startSelfActivity(View test) {
+        Intent intent = new Intent(MainActivity.this, RelevantActivity.class);
         startActivity(intent);
     }
     @Override

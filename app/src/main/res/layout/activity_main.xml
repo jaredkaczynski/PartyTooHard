@@ -37,6 +37,7 @@
             android:id="@+id/button2"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:onClick="startPartyActivity"
             android:text="Submit a party"
             android:textSize="35dp" />
     </LinearLayout>
@@ -52,6 +53,7 @@
             android:id="@+id/button3"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:onClick="startSelfActivity"
             android:text="Relevant to You"
             android:textSize="35dp" />
     </LinearLayout>
