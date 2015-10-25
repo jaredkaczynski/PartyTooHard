@@ -1,5 +1,6 @@
 package com.example.tk100_000.partytoohard;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -11,21 +12,28 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private ArrayAdapter<String> listAdapter ;
+
+    public void startNoiseActivity(View test) {
+        Intent intent = new Intent(MainActivity.this, submitNoiseActivity.class);
+        startActivity(intent);
+    }
+
+    public void startPartyActivity(View test) {
+        Intent intent = new Intent(MainActivity.this, submitNoiseActivity.class);
+        startActivity(intent);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //LinearLayout ll = (LinearLayout) findViewById(R.id.view); // get the parent layout view
-        //ListView tv = (ListView) ll.findViewById(R.id.listView); // get the child text view
-        //final String text = tv.getText().toString();
-        //CardView cardView = ((CardView) findViewById(R.id.cardList));
-        //RecyclerView recList = (RecyclerView) findViewById(R.id.cardList);
+
         Button report = (Button) findViewById(R.id.button);
         report.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 // TODO Auto-generated method stub
+
                 return false;
             }
         });
@@ -47,25 +55,8 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-        /*TextView t = (TextView) findViewById(R.id.info_text1);
-        t.setText("Report Noise Complaint");
-        t = (TextView) findViewById(R.id.info_text2);
-        t.setText("Add Party to Database");
-        t = (TextView) findViewById(R.id.info_text3);
-        t.setText("Your Reports");
-        t = (TextView) findViewById(R.id.info_text4);
-        t.setText("Report Noise Complaint");*/
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
+
     }
 
     @Override

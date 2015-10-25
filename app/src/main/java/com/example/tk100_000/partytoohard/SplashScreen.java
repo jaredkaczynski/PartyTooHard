@@ -8,13 +8,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.location.Criteria;
-import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
-
-import org.apache.http.client.fluent.Form;
-import org.apache.http.client.fluent.Request;
 
 import java.io.IOException;
 
@@ -28,10 +24,10 @@ public class SplashScreen extends Activity {
         Criteria criteria = new Criteria();
         String bestProvider = locationManager.getBestProvider(criteria, false);
 
-        Location location = locationManager.getLastKnownLocation(bestProvider);
-        Request.Post("http://partyhardy.cloudapp.net/smart/api/v1/user")
+        // Location location = locationManager.getLastKnownLocation(bestProvider);
+        /*Request.Post("http://partyhardy.cloudapp.net/smart/api/v1/user")
                 .bodyForm(Form.form().add("uid", android_id).add("location", "test").build())
-                .execute().returnContent().asString();
+                .execute().returnContent().asString();*/
         return 0;
     }
     @Override
@@ -40,6 +36,11 @@ public class SplashScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
         //todo send post to server
+        try {
+            sendUserData();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         Thread timerThread = new Thread(){
             public void run(){
                 try{
