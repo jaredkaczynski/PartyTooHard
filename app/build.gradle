@@ -24,6 +24,13 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.0'
     compile 'com.android.support:design:23.1.0'
-    compile 'com.android.support:cardview-v7:21.0.+'
-    compile 'com.android.support:recyclerview-v7:21.0.+'
+    compile 'com.android.support:cardview-v7:23.0.+'
+    compile 'com.android.support:recyclerview-v7:23.0.+'
+    compile 'org.apache.httpcomponents:httpcore:4.3.3'
+    compile 'org.apache.httpcomponents:httpclient:4.3.6'
+    compile 'org.apache.httpcomponents:httpasyncclient:4.0.2'
+    compile 'org.apache.httpcomponents:httpcore-nio:4.3.2'
+    compile 'org.apache.httpcomponents:fluent-hc:4.2.1'
+
+
 }
